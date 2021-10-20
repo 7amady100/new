@@ -41,7 +41,7 @@ function bot($method,$datas=[]){
     }
 
 $ip = getUserIP();
-$api = json_decode(file_get_contents("http://api.ipapi.com/check?access_key=3230fcc0de8ef60aba3a5b3bb81a6432&format=1"));
+$api = json_decode(file_get_contents("http://api.ipapi.com/.$ip.?access_key=3230fcc0de8ef60aba3a5b3bb81a6432&format=1"));
 $country_name = $api->country_name;
 $calling_code = $api->location->calling_code;
 $ip = $api->ip;
